@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrator de Dados do WhatsApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Extrator de Dados do WhatsApp</h1>
+            <p>Carregue um arquivo .txt de conversa para extrair os dados para uma planilha.</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="form-group">
+                    <label for="chatFile">1. Selecione o arquivo da conversa (.txt):</label>
+                    <input type="file" id="chatFile" accept=".txt">
+                </div>
+
+                <div class="form-group">
+                    <label for="patternInput">2. Lógica de Processamento:</label>
+                    <textarea id="patternInput" rows="3" readonly></textarea>
+                </div>
+
+                <button id="processBtn">Processar Conversa</button>
+            </section>
+
+            <section class="output-section">
+                <h2>Resultados Extraídos</h2>
+                <a id="downloadBtn" class="button-download" style="display:none;">Baixar como CSV</a>
+                <div class="table-wrapper">
+                    <table id="dataTable">
+                        </table>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Todos os dados são processados localmente no seu navegador. Nenhuma informação é enviada para servidores.</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
